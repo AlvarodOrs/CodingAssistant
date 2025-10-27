@@ -38,7 +38,7 @@ Run the main director service:
     ```
 
 Monitor tasks and nodes (dashboard coming soon).
-Add new automation logic in the workers/ and nodes/ directories.
+Add new automation logic in the ```workers/``` and ```nodes/``` directories.
 
 🤝 Contributing
 
