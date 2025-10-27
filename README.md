@@ -40,11 +40,11 @@ Run the main director service:
 Monitor tasks and nodes (dashboard coming soon).
 Add new automation logic in the ```workers/``` and ```nodes/``` directories.
 
-🤝 Contributing
+## 🤝 Contributing
 
 Pull requests are welcome! For major changes, open an issue first to discuss what you’d like to modify.
 
-📜 License
+## 📜 License
 
 This project is licensed under the MIT License – see the LICENSE
  file for details.
