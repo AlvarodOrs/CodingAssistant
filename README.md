@@ -1,7 +1,7 @@
 # Gideon  
 **Generalized Intelligent Director for Engineering & Operations Nodes**  
 
-Gideon is an intelligent automation assistant designed to orchestrate complex engineering and operations workflows. It integrates seamlessly with modern software infrastructure, enabling efficient task execution, monitoring, and system management.  
+Gideon is an intelligent automation assistant designed to orchestrate complex engineering and operations workflows. It integrates seamlessly with modern software infrastructure, enabling efficient task execution, monitoring and system management.  
 
 ## ⚙️ Features
 - **Backend Automation:** Python-based orchestration engine for efficient, scalable automation.  
