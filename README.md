@@ -22,20 +22,20 @@ Gideon is an intelligent automation assistant designed to orchestrate complex en
 
 
 3. Install dependencies:
-```bash
-pip install -r requirements.txt
-```
+    ```bash
+    pip install -r requirements.txt
+    ```
 
 4. (Optional) Launch Docker:
-```bash
-docker compose up --build
-```
+    ```bash
+    docker compose up --build
+    ```
 ## 🧩 Usage
 
 Run the main director service:
-```bash
-python main.py
-```
+    ```bash
+    python main.py
+    ```
 
 Monitor tasks and nodes (dashboard coming soon).
 Add new automation logic in the workers/ and nodes/ directories.
