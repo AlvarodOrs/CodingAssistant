@@ -33,7 +33,7 @@ Gideon is an intelligent automation assistant designed to orchestrate complex en
 ## 🧩 Usage
 
 Run the main director service:
-    ```bash
+    ```
     python main.py
     ```
 
