@@ -1,5 +1,5 @@
 # Gideon  
-**Generalized Intelligent Director for Engineering & Operations Nodes**  
+**General Infrastructure Director for Engineering, Operations & Networking**  
 
 Gideon is an intelligent automation assistant designed to orchestrate complex engineering and operations workflows. It integrates seamlessly with modern software infrastructure, enabling efficient task execution, monitoring and system management.  
 
