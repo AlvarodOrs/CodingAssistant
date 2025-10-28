@@ -4,23 +4,23 @@ import subprocess
 import threading
 import time
 from datetime import datetime
-from app import config
+from backend.app import config
 
-def auto_commit_and_push(repo_path: str, commit_message: str = None):
+def auto_commit_and_push(repo_path: str, commit_message: str = None) -> None:
     """
     Automatically stages and commits specified files to the git repository.
 
     :param repo_path: Path to the git repository.
     :param commit_message: Commit message for the commit.
     """
-    def has_changes():
+    def has_changes() -> bool:
         """
         Check if there are any changes in the repository.
         """
         result = subprocess.run(['git', '-C', repo_path, 'status', '--porcelain'], capture_output=True, text=True)
         return bool(result.stdout.strip())
         
-    def commit_and_push():
+    def commit_and_push() -> None:
         commit_message = None
         if not commit_message:
             def ask_for_message():

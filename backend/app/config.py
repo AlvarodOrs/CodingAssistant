@@ -8,3 +8,8 @@ DEFAULT_COMMIT_MESSAGE = "Auto-update on {timestamp}"
 
 # Maximum time to wait for user input for commit message in seconds
 USER_INPUT_TIMEOUT = 30  # 30 seconds
+
+# Git configuration
+
+GIT_USER_NAME = "Álvaro d'Ors Nestares"
+GIT_USER_EMAIL = "alvarodorsnestares@gmail.com"
