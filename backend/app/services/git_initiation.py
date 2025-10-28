@@ -1,4 +1,5 @@
 import os
+import sys
 import subprocess
 import backend.app.config as config
 
@@ -18,6 +19,7 @@ def check_git_installed() -> bool:
 
 def initialize_git_repo(repo_path: str) -> None:
     git_dir = os.path.join(repo_path, '.git')
+    input("pepe" + git_dir)
     if not os.path.exists(git_dir):
         try:
             subprocess.run(['git', '-C', repo_path, 'init'], check=True)
@@ -65,20 +67,19 @@ def configure_git_user() -> None:
     Configure git global username/email from config.py and print them.
     """
     if not config.GIT_USERNAME or not config.GIT_EMAIL:
-        print("❌ Git username/email not set in config.py")
+        print("Git username/email not set in config.py")
         return
     try:
         subprocess.run(['git', 'config', '--global', 'user.name', config.GIT_USERNAME], check=True)
         subprocess.run(['git', 'config', '--global', 'user.email', config.GIT_EMAIL], check=True)
         # Print what is being used
-        print(f"✅ Git global user set to: {config.GIT_USERNAME} <{config.GIT_EMAIL}>")
+        print(f"Git global user set to: {config.GIT_USERNAME} <{config.GIT_EMAIL}>")
     except subprocess.CalledProcessError as e:
         print(f"Failed to configure Git user: {e}")
         return
 
 def main():
-    repo_path = os.path.dirname(os.path.abspath(__file__))
-
+    repo_path = input("Input the path to the git repository: ").strip()
     if not check_git_installed():
         return
 

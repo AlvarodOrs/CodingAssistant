@@ -1,5 +1,8 @@
 # Config file
 
+# Default path to the git repository (can be None)
+PROJECT_PATH = None
+
 # Gideon's interval of changes checking in seconds
 AUTO_COMMIT_INTERVAL = 30  # 5 minutes
 
