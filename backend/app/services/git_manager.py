@@ -21,7 +21,7 @@ def auto_commit_and_push(repo_path: str, commit_message: str = None):
         return bool(result.stdout.strip())
         
     def commit_and_push():
-        nonlocal commit_message
+        commit_message = None
         if not commit_message:
             def ask_for_message():
                 nonlocal commit_message
