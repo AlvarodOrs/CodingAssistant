@@ -13,6 +13,15 @@ def auto_commit_and_push(repo_path: str, commit_message: str = None):
     :param commit_message: Commit message for the commit.
     """
     try:
+        def has_changes():
+            """Check if there are any changes in the repository."""
+            result = subprocess.run(['git', '-C', repo_path, 'status', '--porcelain'], capture_output=True, text=True)
+            return bool(result.stdout.strip())
+        
+        if not has_changes():
+            print("No changes to commit.")
+            return
+        
         def ask_for_message():
             nonlocal commit_message
             try: 
