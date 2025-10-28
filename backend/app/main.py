@@ -1,4 +1,4 @@
-from services.git_manager import auto_commit_and_push
+from app.services.git_manager import auto_commit_and_push
 import os
 
 if __name__ == "__main__":
