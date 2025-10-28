@@ -49,7 +49,7 @@ def auto_commit_and_push(repo_path: str, commit_message: str = None):
         except subprocess.CompletedProcessError as e:
             print(f"An error occurred during git execution: {e}")
 
-        print("Gideon initiated, he will commit changes in the background every .")
+        print("Gideon initiated, he will commit changes in the background every {config.AUTO_COMMIT_INTERVAL} seconds.")
     while True:
         if has_changes():
             print("Checking for changes to commit...")
