@@ -11,7 +11,6 @@ def auto_commit_and_push(repo_path: str, commit_message: str = None):
     Automatically stages and commits specified files to the git repository.
 
     :param repo_path: Path to the git repository.
-    :param file_paths: List of file paths to stage and commit.
     :param commit_message: Commit message for the commit.
     """
     def has_changes():
@@ -49,7 +48,7 @@ def auto_commit_and_push(repo_path: str, commit_message: str = None):
         except subprocess.CompletedProcessError as e:
             print(f"An error occurred during git execution: {e}")
 
-        print("Gideon initiated, he will commit changes in the background every {config.AUTO_COMMIT_INTERVAL} seconds.")
+    print(f"Gideon initiated, he will commit changes in the background every {config.AUTO_COMMIT_INTERVAL} seconds.")
     while True:
         if has_changes():
             print("Checking for changes to commit...")
